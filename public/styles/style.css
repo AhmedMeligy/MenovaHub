@@ -1,0 +1,64 @@
+#topbar{
+    background-color: #164863;
+    color: #F7EEDD;
+    font-size: 17px;
+    font-weight: bold;
+}
+footer{
+    background-color: #164863 !important;
+}
+#topbar a:hover{
+    transform: scale(1.1);
+}
+.navbar{
+    background-color: #427D9D !important;
+}
+.navbar-brand{
+    color: white !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+}
+.nav-link{
+    color: white !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+.nav-item a:hover{
+    color: #008DDA !important;
+    transform: scale(1.1);
+    transition:  0.4s ease-in-out;
+}
+.dot{
+    color: #F7EEDD;
+    font-size: 34px !important;
+}
+.cover-img{
+    position: relative;
+    width: 100%;
+}
+.hero{
+    position: absolute;
+    top: 30%;
+    left: 17%;
+    
+}
+.name{
+    color: #164863;
+}
+.hero{
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px !important;
+    height: 100px !important; 
+    background-color: gray !important; 
+    color: black !important;
+}
