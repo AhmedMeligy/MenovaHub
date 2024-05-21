@@ -7,5 +7,7 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::resource('', CategoryController::class);
+Route::resource('/categories', CategoryController::class);
+Route::get('/', [CategoryController::class,'index']);
+
 
