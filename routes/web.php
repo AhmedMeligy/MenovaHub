@@ -8,6 +8,6 @@ Route::get('/', function () {
 });
 
 Route::resource('/categories', CategoryController::class);
-Route::get('/', [CategoryController::class,'index']);
+Route::get('/', [CategoryController::class, 'index']);
 
-
+Route::get('/application/{categroyId}/{cardId}', [CategoryController::class, 'show']);

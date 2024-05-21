@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Category;
 use App\Models\Card;
 use Illuminate\Http\Request;
@@ -12,10 +13,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-    $cards = Card::all();
-    $categories = Category::all();
+        $cards = Card::all();
+        $categories = Category::all();
 
-    return view('landing', ['cards' => $cards, 'categories' => $categories]);
+        return view('landing', ['cards' => $cards, 'categories' => $categories]);
     }
 
     /**
@@ -37,9 +38,9 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $categoryId, $cardId)
     {
-        //
+        return view('products', compact('categoryId', 'cardId'));
     }
 
     /**
