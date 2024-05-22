@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Category;
 use App\Models\Card;
 use Illuminate\Http\Request;
@@ -38,9 +37,13 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $categoryId, $cardId)
+    public function show(string $categoryTitle)
     {
-        return view('products', compact('categoryId', 'cardId'));
+        // dd($categoryTitle);
+    //     $category=Category::where('title','like',$categoryTitle.'%')->get();
+    //     // dd($category);
+        
+    //     return view('products', compact('category'));
     }
 
     /**

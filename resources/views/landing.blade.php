@@ -22,20 +22,19 @@
                             @endif
                             <div class="col-md-4">
                                 <div class="card">
-                                    @php
-                                        $categorySlug = str_replace(' ', '-', strtolower($category->title));
-                                        $cardSlug = str_replace(' ', '-', strtolower($card->title));
-                                    @endphp
-                                    <a href="{{ '/application/' . $categorySlug . '/' . $cardSlug }}"
-                                        class="text-decoration-none text-reset">
-                                        <img src="{{ $card->img }}" class="card-img-top" alt="..."
-                                            style="height: 200px;">
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{ $card->title }}</h5>
-                                        </div>
-                                    </a>
+                                    <form action="{{ url(Str::slug($category->title) . '/' . Str::slug($card->title)) }}" method="POST" class="text-decoration-none text-reset" style="display: flex; flex-direction: column; height: 100%;">
+                                        @csrf
+                                        <input type="hidden" name="card_id" value="{{ $card->id }}">
+                                        <button type="submit" class="btn btn-link p-0" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: start; width: 100%; height: 100%; border: none; background: none;">
+                                            <img src="{{ $card->img }}" class="card-img-top" alt="..." style="height: 200px; width: 100%;">
+                                            <div class="card-body" style="flex-grow: 1;">
+                                                <h5 class="card-title">{{ $card->title }}</h5>
+                                            </div>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
+                             
                             <?php $counter++; ?>
                             @if ($counter % 3 == 0 || $counter == count($cards->where('category_id', $category->id)))
                     </div>
