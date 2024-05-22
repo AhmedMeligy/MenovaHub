@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Card;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,10 +18,10 @@ return new class extends Migration
             $table->string('title');
             $table->string('video')->nullable();
             $table->text('desc');
-            $table->unsignedBigInteger('card_id');
+            $table->foreignIdFor(Card::class)->constraind()->onDelete('cascade');
             $table->timestamps();
 
-            $table->foreign('card_id')->references('id')->on('cards')->onDelete('cascade');
+
         });
     }
 
