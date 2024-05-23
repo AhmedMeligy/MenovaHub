@@ -10,7 +10,7 @@ footer{
 #topbar a:hover{
     transform: scale(1.1);
 }
-.navbar{
+.navbar, .card-body, .get-started{
     background-color: #427D9D !important;
 }
 .navbar-brand{
@@ -61,4 +61,8 @@ footer{
     height: 100px !important; 
     background-color: gray !important; 
     color: black !important;
+}
+.card:hover{
+    transform: scale(1.02);
+    transition:  0.4s ease-in-out;
 }

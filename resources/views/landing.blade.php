@@ -5,10 +5,10 @@
         <img src="{{ asset('images/cover8.jpg') }}" alt="" width="100%" height="500vh">
         <div class="hero text-start">
             <p>Welcome to <span class="name">MenovaHub</span></p>
-            <button class="btn btn-primary">Get Started</button>
+            <button class="btn get-started text-white ">Get Started</button>
         </div>
     </div>
-    <section class="pt-5 pb-5">
+    <section class="pt-5 pb-5" id="services">
         <div class="container mt-5">
             @foreach ($categories as $category)
                 <h1 class="mt-5">{{ $category->title }}</h1>
@@ -21,14 +21,14 @@
                                     <div class="row">
                             @endif
                             <div class="col-md-4">
-                                <div class="card">
+                                <div class="card mt-4 rounded-5">
                                     <form action="{{ url(Str::slug($category->title) . '/' . Str::slug($card->title)) }}" method="POST" class="text-decoration-none text-reset" style="display: flex; flex-direction: column; height: 100%;">
                                         @csrf
                                         <input type="hidden" name="card_id" value="{{ $card->id }}">
                                         <button type="submit" class="btn btn-link p-0" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: start; width: 100%; height: 100%; border: none; background: none;">
-                                            <img src="{{ $card->img }}" class="card-img-top" alt="..." style="height: 200px; width: 100%;">
-                                            <div class="card-body" style="flex-grow: 1;">
-                                                <h5 class="card-title">{{ $card->title }}</h5>
+                                            <img src="{{ asset('images/'.$card->img) }}" class="card-img-top rounded-top-5" alt="..." style="height: 200px; width: 100%;">
+                                            <div class="card-body text-white w-100 rounded-bottom-5" style="flex-grow: 1;">
+                                                <h4 class="card-title">{{ $card->title }}</h5>
                                             </div>
                                         </button>
                                     </form>
