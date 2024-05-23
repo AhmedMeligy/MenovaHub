@@ -29,17 +29,15 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($categories_type as $type) {
-            // if (!Category::where('title', $type)->exists()) {
-                Category::factory()->create([
-                    'title' => $type,
-                ]);
-            // }
+            Category::factory()->create([
+                'title' => $type,
+            ]);
         }
 
         //3-card
         Card::factory(30)->create();
 
         //4-product
-        Product::factory(50)->create();
+        Product::factory(400)->create();
     }
 }
