@@ -14,6 +14,10 @@
         }
     </style>
 
+    <div class="container mt-3">
+        <h1 class="">{{ ucwords(str_replace('-', ' ', $category)) }} :</h1>
+    </div>
+
 
     @if ($products->isEmpty())
         <div class="container text-center">

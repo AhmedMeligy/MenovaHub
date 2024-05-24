@@ -15,8 +15,8 @@ use App\Models\Card;
 
         $products = Product::where('card_id', $card->id)->get();
 
-        return view('products', compact('products'));
+        return view('products', compact('products', 'category'));
      }
-    }   
+    }
 
 
