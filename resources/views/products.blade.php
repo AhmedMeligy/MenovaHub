@@ -15,7 +15,7 @@
     </style>
 
     <div class="container mt-3">
-        <h1 class="">{{ ucwords(str_replace('-', ' ', $category)) }} :</h1>
+        <h1 class="">{{ Str::title(Str::replace('-', ' ', $category)) }} :</h1>
     </div>
 
 
