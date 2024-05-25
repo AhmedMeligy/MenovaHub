@@ -15,13 +15,13 @@
     </style>
 
     <div class="container mt-3">
-        <h1 class="">{{ Str::title(Str::replace('-', ' ', $category)) }} :</h1>
+        <h1 class="text-decoration-underline link-offset-2">{{ Str::title(Str::replace('-', ' ', $category)) }} :</h1>
     </div>
 
 
     @if ($products->isEmpty())
         <div class="container text-center">
-            <h1>No products available for this category.</h1>
+            <h1>{{ Str::title('No products available for this category.') }}</h1>
         </div>
     @else
         <div class="container bg-white d-flex flex-wrap justify-content-between">
